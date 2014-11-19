@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_light" translatable="false">sans-serif-light</string>
+
+    <string name="md5" translatable="false">MD5</string>
+</resources>
