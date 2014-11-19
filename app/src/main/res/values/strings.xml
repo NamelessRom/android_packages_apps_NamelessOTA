@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NamelessOTA</string>
+    <string name="action_all_builds">Show all builds</string>
+
+    <string name="system_updates">System updates</string>
+    <string name="update_avail">A system update is available.</string>
+    <string name="update_not_avail">Your system is up to date.</string>
+    <string name="last_checked">Last checked for update at %s</string>
+    <string name="update_check_failed">Update check failed!</string>
+
+    <string name="check_now">Check now</string>
+    <string name="update_system">Update system</string>
+
+    <string name="device">Device</string>
+    <string name="channel">Channel</string>
+    <string name="date">Date</string>
+    <string name="filename">Filename</string>
+
+</resources>
