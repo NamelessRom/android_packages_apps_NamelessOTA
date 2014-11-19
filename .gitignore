@@ -28,7 +28,7 @@ proguard/
 *.iws
 .idea/
 .gradle
-local.properties
+#local.properties
 .idea/workspace.xml
 out/
 proguard_logs/
