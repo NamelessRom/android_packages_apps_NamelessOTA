@@ -37,7 +37,7 @@ import java.util.Date;
 
 public class Updater implements Response.Listener<JSONArray>, Response.ErrorListener {
     public static final String SF_URL =
-            "https://sourceforge.net/projects/namelessrom/files/n-2.0/%s/";
+            "https://sourceforge.net/projects/namelessrom/files/n-2.1/%s/";
 
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
 
