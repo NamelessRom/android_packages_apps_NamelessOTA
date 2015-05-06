@@ -4,7 +4,8 @@
   <string name="action_all_builds">Zeige alle Aktualisierungen</string>
   <string name="action_preferences">Einstellungen</string>
   <string name="action_toggle_drawer">Leiste umschalten</string>
-  <string name="action_refresh">Aktualisieren</string>
+  <string name="action_refresh">Aktualisieren
+</string>
   <string name="recent_changes">Neueste Änderungen</string>
   <string name="recent_changes_notice">Hinweis: Neueste Änderungen repräsentieren den aktuellen Status des Projektes.\nDie neuesten Änderungen müssen nicht unbedingt in der neuesten Version vorhanden sein!</string>
   <string name="searching_changes">Suche nach Änderungen&#8230;</string>
