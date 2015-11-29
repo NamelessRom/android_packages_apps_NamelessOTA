@@ -22,8 +22,9 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonArrayRequest;
 
+import namelessrom.os.Build;
+
 import org.json.JSONArray;
-import org.namelessrom.ota.Device;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +39,7 @@ public class UpdatesJsonArrayRequest extends JsonArrayRequest {
 
     @Override
     public Map<String, String> getHeaders() throws AuthFailureError {
-        mHeaders.put("User-Agent", Device.get().userAgent);
+        mHeaders.put("User-Agent", String.format("%s/%s", "org.namelessrom.ota", Build.DEVICE));
         mHeaders.put("Cache-Control", "no-cache");
         return mHeaders;
     }

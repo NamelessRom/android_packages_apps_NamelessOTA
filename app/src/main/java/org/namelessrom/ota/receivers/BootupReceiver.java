@@ -27,7 +27,8 @@ import android.text.TextUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-import org.namelessrom.ota.Device;
+import namelessrom.os.Build;
+
 import org.namelessrom.ota.updater.UpdateEntry;
 import org.namelessrom.ota.utils.AlarmScheduler;
 import org.namelessrom.ota.utils.IOUtils;
@@ -62,7 +63,7 @@ public class BootupReceiver extends BroadcastReceiver {
                     return null;
                 }
 
-                if (Device.get().date >= entry.timestamp) {
+                if (Build.DATE >= entry.timestamp) {
                     Logger.d(TAG, "--> installed build is newer or equal to update, delete update");
                     new File(IOUtils.DOWNLOAD_PATH, "update.zip").delete();
                     file.delete();

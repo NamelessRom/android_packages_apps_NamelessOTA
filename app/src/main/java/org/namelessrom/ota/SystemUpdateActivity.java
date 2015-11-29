@@ -35,6 +35,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import namelessrom.os.Build;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.namelessrom.ota.changelog.ChangelogActivity;
@@ -72,7 +74,6 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
     protected void onResume() {
         super.onResume();
         //Logger.setEnabled(true);
-        Logger.v(TAG, Device.get().toString());
 
         // cancel pending notifications
         NotificationUtil.cancelAll(this);
@@ -257,7 +258,7 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
                 return true;
             }
             case R.id.action_all_builds: {
-                final String url = String.format(Updater.SF_URL, Device.get().name);
+                final String url = String.format(Build.OTA_URL, Build.DEVICE);
                 final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 try {
                     startActivity(intent);

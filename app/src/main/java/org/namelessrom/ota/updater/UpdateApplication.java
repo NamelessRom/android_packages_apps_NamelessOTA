@@ -19,7 +19,8 @@
 package org.namelessrom.ota.updater;
 
 import android.app.Application;
-import android.os.SystemProperties;
+
+import namelessrom.os.Build;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
@@ -33,7 +34,7 @@ public class UpdateApplication extends Application {
     public void onCreate() {
         mRequestQueue = Volley.newRequestQueue(this);
 
-        Logger.setEnabled(SystemProperties.getBoolean("ro.nameless.debug", false));
+        Logger.setEnabled(Build.DEBUG);
     }
 
     public RequestQueue getQueue() {

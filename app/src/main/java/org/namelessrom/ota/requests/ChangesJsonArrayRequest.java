@@ -27,7 +27,8 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-import org.namelessrom.ota.Device;
+import namelessrom.os.Build;
+
 import org.namelessrom.ota.changelog.Change;
 
 import java.io.UnsupportedEncodingException;
@@ -47,7 +48,7 @@ public class ChangesJsonArrayRequest extends Request<Change[]> {
 
     @Override
     public Map<String, String> getHeaders() throws AuthFailureError {
-        mHeaders.put("User-Agent", Device.get().userAgent);
+        mHeaders.put("User-Agent", String.format("%s/%s", "org.namelessrom.ota", Build.DEVICE));
         mHeaders.put("Cache-Control", "no-cache");
         mHeaders.put("Accept", "application/json");
         return mHeaders;

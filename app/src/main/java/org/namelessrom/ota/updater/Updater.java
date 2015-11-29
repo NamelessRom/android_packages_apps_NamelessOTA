@@ -25,9 +25,10 @@ import android.preference.PreferenceManager;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import namelessrom.os.Build;
+
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.namelessrom.ota.Device;
 import org.namelessrom.ota.listeners.UpdateListener;
 import org.namelessrom.ota.requests.UpdatesJsonArrayRequest;
 import org.namelessrom.ota.utils.AlarmScheduler;
@@ -37,12 +38,7 @@ import org.namelessrom.ota.utils.NotificationUtil;
 import java.util.Date;
 
 public class Updater implements Response.Listener<JSONArray>, Response.ErrorListener {
-    private static final String PROP_OTA_URL = "ro.nameless.ota.download";
-    private static final String DEFAULT_OTA_URL =
-            "https://sourceforge.net/projects/namelessrom/files/n-2.1/%s/";
-
-    public static final String SF_URL = SystemProperties.get(
-            PROP_OTA_URL, DEFAULT_OTA_URL);
+    public static final String SF_URL = Build.OTA_URL;
 
     public static final String LAST_UPDATE_CHECK_PREF = "pref_last_update_check";
 
@@ -94,7 +90,7 @@ public class Updater implements Response.Listener<JSONArray>, Response.ErrorList
                     }
                 }
 
-                if (updateEntry != null && updateEntry.timestamp > Device.get().date) {
+                if (updateEntry != null && updateEntry.timestamp > Build.DATE) {
                     NotificationUtil.updateAvailable(mContext);
                 }
 
@@ -105,7 +101,7 @@ public class Updater implements Response.Listener<JSONArray>, Response.ErrorList
     }
 
     private String getUrl() {
-        return String.format(URL, Device.get().name);
+        return String.format(URL, Build.DEVICE);
     }
 
     @Override
