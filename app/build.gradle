@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 122
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "org.namelessrom.ota"
         minSdkVersion 21
-        targetSdkVersion 122
+        targetSdkVersion 23
     }
     signingConfigs {
         release {
@@ -64,7 +64,7 @@ dependencies {
     // source build as jar just to make work easier with android studio
     compile files('libs/gson.jar')
     compile files('libs/volley.jar')
-    compile 'com.android.support:support-v4:22.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
     testCompile 'junit:junit:4.12'
     testCompile "org.mockito:mockito-core:1.9.5"
 }

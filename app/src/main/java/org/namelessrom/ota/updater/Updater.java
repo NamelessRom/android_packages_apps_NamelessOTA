@@ -39,7 +39,7 @@ import java.util.Date;
 public class Updater implements Response.Listener<JSONArray>, Response.ErrorListener {
     private static final String PROP_OTA_URL = "ro.nameless.ota.download";
     private static final String DEFAULT_OTA_URL =
-            "https://sourceforge.net/projects/namelessrom/files/n-2.1/%s/";
+            "https://sourceforge.net/projects/namelessrom/files/n-3.0/%s/";
 
     public static final String SF_URL = SystemProperties.get(
             PROP_OTA_URL, DEFAULT_OTA_URL);
