@@ -67,4 +67,8 @@
 
     <!-- PREFERENCES RECENT CHANGES -->
     <string name="changes_to_load">Changes to load</string>
+
+    <!-- Permission check -->
+    <string name="permission_not_granted_dialog_title">Permission not granted</string>
+    <string name="permission_not_granted_dialog_message">The permission to write to external storage was not granted. Cannot download update.</string>
 </resources>

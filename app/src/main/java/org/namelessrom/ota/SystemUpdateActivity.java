@@ -21,10 +21,14 @@ package org.namelessrom.ota;
 import android.annotation.Nullable;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.Menu;
@@ -53,8 +57,13 @@ import org.namelessrom.ota.utils.Utils;
 
 import java.io.File;
 
-public class SystemUpdateActivity extends Activity implements UpdateListener, DownloadHelper.DownloadCallback {
+import namelessrom.os.Build;
+
+public class SystemUpdateActivity extends Activity implements UpdateListener, DownloadHelper.DownloadCallback,
+        ActivityCompat.OnRequestPermissionsResultCallback {
     private static final String TAG = "SystemUpdateActivity";
+
+    private static final int PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 1;
 
     private TextView mTitle;
     private ProgressBar mDownloadProgress;
@@ -72,7 +81,6 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
     protected void onResume() {
         super.onResume();
         //Logger.setEnabled(true);
-        Logger.v(TAG, Device.get().toString());
 
         // cancel pending notifications
         NotificationUtil.cancelAll(this);
@@ -217,6 +225,18 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
             // TODO: throw error?
             return;
         }
+
+        if (ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            reallyDownloadUpdate();
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{ android.Manifest.permission.WRITE_EXTERNAL_STORAGE },
+                    PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+        }
+    }
+
+    private void reallyDownloadUpdate() {
         final String updateName = "update.zip";
         final File infoFile = new File(IOUtils.DOWNLOAD_PATH, updateName + ".info");
         Logger.i(this, "downlading -> %s", mUpdateEntry.downloadurl);
@@ -240,6 +260,27 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: {
+                // if request is cancelled, the result arrays are empty
+                if (grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    reallyDownloadUpdate();
+                } else {
+                    new AlertDialog.Builder(this)
+                            .setTitle(R.string.permission_not_granted_dialog_title)
+                            .setMessage(R.string.permission_not_granted_dialog_message)
+                            .setPositiveButton(android.R.string.ok, null)
+                            .show();
+                    return;
+                }
+                break;
+            }
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
         // inflate our action bar items, nothing special
         getMenuInflater().inflate(R.menu.menu_system_update, menu);
@@ -257,7 +298,7 @@ public class SystemUpdateActivity extends Activity implements UpdateListener, Do
                 return true;
             }
             case R.id.action_all_builds: {
-                final String url = String.format(Updater.SF_URL, Device.get().name);
+                final String url = String.format(Build.OTA_URL, Build.DEVICE);
                 final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 try {
                     startActivity(intent);
