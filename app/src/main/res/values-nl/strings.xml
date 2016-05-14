@@ -5,10 +5,12 @@
   <string name="action_preferences">Voorkeuren</string>
   <string name="action_toggle_drawer">Schakel knop</string>
   <string name="action_refresh">Vernieuwen</string>
+  <!-- CHANGELOG -->
   <string name="recent_changes">Recente wijzigingen</string>
   <string name="recent_changes_notice">Let op: Recente wijzigingen zijn de huidige status van het project.\nDit betekent niet dat de meest recente build de meest recente wijzigingen bevat!</string>
   <string name="searching_changes">Zoeken naar veranderingen&#8230;</string>
   <string name="found_changes">Wijzigingen gevonden: %s</string>
+  <!-- SYSTEM UPDATES -->
   <string name="system_updates">Systeemupdates</string>
   <string name="update_avail">Er is een systeemupdate beschikbaar.</string>
   <string name="update_not_avail">Uw systeem is up-to-date.</string>
@@ -24,12 +26,14 @@
   <string name="type">Type</string>
   <string name="date">Datum</string>
   <string name="filename">Bestandsnaam</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
   <string name="downloading_system_update">Systeem update downloaden&#8230;</string>
   <string name="download_get_notified">We laten u weten zodra het downloaden klaar is :)</string>
   <string name="cancel_download">Download annuleren</string>
   <string name="cancel_download_summary">Wilt u de huidige systeem update download annuleren?</string>
   <string name="system_update_ready">Systeemupdate staat klaar!</string>
   <string name="system_update_ready_message">Het apparaat zal automatisch herstarten en de update installeren.</string>
+  <!-- INSTALL -->
   <string name="select_actions">Selecteer de acties die u zou willen uitvoeren</string>
   <string name="backup">Back-up</string>
   <string name="wipe_data">Gegevens wissen</string>
@@ -48,10 +52,13 @@
   <string name="alert_reboot_install_title">Systeemupdate installeren</string>
   <string name="alert_reboot_one_message">Uw apparaat zal herstarten en de update installeren.</string>
   <string name="alert_reboot_now">Nu installeren</string>
+  <!-- PREFERENCES -->
   <string name="check_frequency">Controleer ferquentie</string>
   <string name="disabled">Uitgeschakeld</string>
   <string name="daily">Dagelijks</string>
   <string name="every_third_day">Om de drie dagen</string>
   <string name="weekly">Wekelijks</string>
+  <!-- PREFERENCES RECENT CHANGES -->
   <string name="changes_to_load">Wijzigingen om te laden</string>
+  <!-- Permission check -->
 </resources>

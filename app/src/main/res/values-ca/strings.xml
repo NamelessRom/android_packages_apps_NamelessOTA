@@ -3,9 +3,16 @@
 <resources>
   <string name="action_preferences">Preferències</string>
   <string name="action_refresh">Refrescar</string>
+  <!-- CHANGELOG -->
+  <!-- SYSTEM UPDATES -->
   <string name="device">Dispositiu</string>
   <string name="date">Data</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
+  <!-- INSTALL -->
   <string name="system">Sistema</string>
   <string name="data">Dades</string>
   <string name="cache">Cache</string>
+  <!-- PREFERENCES -->
+  <!-- PREFERENCES RECENT CHANGES -->
+  <!-- Permission check -->
 </resources>

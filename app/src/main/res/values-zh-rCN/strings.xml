@@ -5,10 +5,12 @@
   <string name="action_preferences">首选项</string>
   <string name="action_toggle_drawer">开关抽屉</string>
   <string name="action_refresh">刷新</string>
+  <!-- CHANGELOG -->
   <string name="recent_changes">近期更新</string>
   <string name="recent_changes_notice">注意： 最近的变化指的是项目的当前状态\n并不意味着最新版本包含最新更改 ！</string>
   <string name="searching_changes">查找项目源代码改动......</string>
   <string name="found_changes">发现改动：%s</string>
+  <!-- SYSTEM UPDATES -->
   <string name="system_updates">系统更新</string>
   <string name="update_avail">有新的系统更新。</string>
   <string name="update_not_avail">您的系统是最新的</string>
@@ -24,12 +26,14 @@
   <string name="type">类型</string>
   <string name="date">日期</string>
   <string name="filename">文件名</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
   <string name="downloading_system_update">正在下载系统更新...</string>
   <string name="download_get_notified">当下载完毕时我们将通知您:)</string>
   <string name="cancel_download">取消下载</string>
   <string name="cancel_download_summary">你想取消下载当前的系统更新吗？</string>
   <string name="system_update_ready">系统更新准备就绪 ！</string>
   <string name="system_update_ready_message">设备将自动重新启动以安装系统更新。</string>
+  <!-- INSTALL -->
   <string name="select_actions">选择希望执行的操作</string>
   <string name="backup">备份</string>
   <string name="wipe_data">清除数据</string>
@@ -48,10 +52,13 @@
   <string name="alert_reboot_install_title">安装系统更新</string>
   <string name="alert_reboot_one_message">您的设备将重新启动并安装系统更新。</string>
   <string name="alert_reboot_now">立即安装</string>
+  <!-- PREFERENCES -->
   <string name="check_frequency">检查频率</string>
   <string name="disabled">禁用</string>
   <string name="daily">每天</string>
   <string name="every_third_day">每三天</string>
   <string name="weekly">每周</string>
+  <!-- PREFERENCES RECENT CHANGES -->
   <string name="changes_to_load">要加载的改动</string>
+  <!-- Permission check -->
 </resources>

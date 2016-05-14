@@ -3,9 +3,13 @@
 <resources>
   <string name="action_preferences">Preferencje</string>
   <string name="action_refresh">Odśwież</string>
+  <!-- CHANGELOG -->
+  <!-- SYSTEM UPDATES -->
   <string name="device">Urządzenie</string>
   <string name="type">Typ</string>
   <string name="date">Data</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
+  <!-- INSTALL -->
   <string name="select_actions">Wybierz działania, jakie chcesz wykonać</string>
   <string name="backup">Kopia zapasowa</string>
   <string name="wipe_data">Wipe data</string>
@@ -15,4 +19,7 @@
   <string name="data">Dane</string>
   <string name="cache">Pamięć podręczna</string>
   <string name="recovery">Uruchom w trybie Recovery</string>
+  <!-- PREFERENCES -->
+  <!-- PREFERENCES RECENT CHANGES -->
+  <!-- Permission check -->
 </resources>

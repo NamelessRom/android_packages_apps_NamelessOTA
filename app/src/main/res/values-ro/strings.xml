@@ -3,9 +3,13 @@
 <resources>
   <string name="action_preferences">Preferinţe</string>
   <string name="action_refresh">Reîmprospătare</string>
+  <!-- CHANGELOG -->
+  <!-- SYSTEM UPDATES -->
   <string name="device">Dispozitiv</string>
   <string name="type">Tip</string>
   <string name="date">Data</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
+  <!-- INSTALL -->
   <string name="select_actions">Selectaţi acţiunile pe care doriţi să le efectuaţi</string>
   <string name="backup">Copie de rezervă</string>
   <string name="wipe_data">Şterge datele</string>
@@ -18,4 +22,7 @@
   <string name="recovery">Mod Recuperare</string>
   <string name="boot">Pornire</string>
   <string name="alert_reboot_now">Instalează acum</string>
+  <!-- PREFERENCES -->
+  <!-- PREFERENCES RECENT CHANGES -->
+  <!-- Permission check -->
 </resources>

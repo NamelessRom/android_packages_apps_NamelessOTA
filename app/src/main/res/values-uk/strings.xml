@@ -3,11 +3,18 @@
 <resources>
   <string name="action_preferences">Параметри</string>
   <string name="action_refresh">Оновити</string>
+  <!-- CHANGELOG -->
+  <!-- SYSTEM UPDATES -->
   <string name="device">Пристрій</string>
   <string name="type">Тип</string>
   <string name="date">Дата</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
+  <!-- INSTALL -->
   <string name="system">Система</string>
   <string name="data">Дані</string>
   <string name="cache">Кеш</string>
   <string name="recovery">Режим відновлення</string>
+  <!-- PREFERENCES -->
+  <!-- PREFERENCES RECENT CHANGES -->
+  <!-- Permission check -->
 </resources>

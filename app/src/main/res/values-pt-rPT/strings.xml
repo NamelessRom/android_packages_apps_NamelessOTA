@@ -5,10 +5,12 @@
   <string name="action_preferences">Preferências</string>
   <string name="action_toggle_drawer">Alternar gaveta</string>
   <string name="action_refresh">Atualizar</string>
+  <!-- CHANGELOG -->
   <string name="recent_changes">Alterações recentes</string>
   <string name="recent_changes_notice">Aviso: As alterações recentes são o estado atual do projeto.\nIt não significa que a compilação mais recente inclua as alterações mais recentes!</string>
   <string name="searching_changes">A procurar alterações...</string>
   <string name="found_changes">Encontradas alterações: %s</string>
+  <!-- SYSTEM UPDATES -->
   <string name="system_updates">Atualizações do sistema</string>
   <string name="update_avail">Está disponível uma actualização de sistema.</string>
   <string name="update_not_avail">O seu sistema encontra-se actualizado.</string>
@@ -24,12 +26,14 @@
   <string name="type">Tipo</string>
   <string name="date">Data</string>
   <string name="filename">Nome do ficheiro</string>
+  <!-- DOWNLOADS/NOTIFICATIONS -->
   <string name="downloading_system_update">Descarregar a atualização do sistema...</string>
   <string name="download_get_notified">Iremos notificá-lo quando a transferência estiver completa :)</string>
   <string name="cancel_download">Cancelar transferência</string>
   <string name="cancel_download_summary">Quer cancelar a transferência da atualização do sistema atual?</string>
   <string name="system_update_ready">A atualização do sistema está pronta!</string>
   <string name="system_update_ready_message">O dispositivo reiniciará automáticamente para instalar as atualizações do sistema.</string>
+  <!-- INSTALL -->
   <string name="select_actions">Selecione as ações que gostaria de executar</string>
   <string name="backup">Cópia de segurança</string>
   <string name="wipe_data">Apagar dados</string>
@@ -48,10 +52,13 @@
   <string name="alert_reboot_install_title">Instale a atualização do sistema</string>
   <string name="alert_reboot_one_message">O dispositivo irá reiniciar e instalar a atualização do sistema.</string>
   <string name="alert_reboot_now">Instalar agora</string>
+  <!-- PREFERENCES -->
   <string name="check_frequency">Verificar frequência</string>
   <string name="disabled">Desativado</string>
   <string name="daily">Diariamente</string>
   <string name="every_third_day">Todos os três dias</string>
   <string name="weekly">Semanal</string>
+  <!-- PREFERENCES RECENT CHANGES -->
   <string name="changes_to_load">Alterações para carregar</string>
+  <!-- Permission check -->
 </resources>
